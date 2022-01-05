@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ice_79"
+             x:Class="ice_79.ReportBug"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0A1646">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="8">
+                <Frame BackgroundColor="Transparent" BorderColor="White" CornerRadius="11" Padding="0, 13">
+                    <StackLayout>
+                        <Label x:Name="PgTitle" Padding="13, 0" FontSize="20" Text="Report bug" FontFamily="UniNeueBold" TextColor="#F0F0F0"/>
+                        <Label Padding="13, 0"  Text="If you have any problem with ice79, you can tell us." TextColor="#0A1646" BackgroundColor="#F0F0F0" FontSize="11"
+                                FontFamily="UniNeueBook"/>
+                        <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Spacing="0" Padding="13, 3">
+                            <Label Padding="0, 15, 0, 13" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="Subject:"/>
+                            <Entry x:Name="SubjectEntry" HorizontalOptions="FillAndExpand" Placeholder="Type your problem subject here" IsPassword="False" FontFamily="UniNeueBook" FontSize="14" PlaceholderColor="#818181" TextColor="#F0F0F0"/>
+                        </StackLayout>
+                        <StackLayout Padding="13, 3">
+                            <Label TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="Description:"/>
+                            <Editor x:Name="DescriEntry" HeightRequest="150" Placeholder="Explain What happened?" FontFamily="UniNeueBook" FontSize="14" PlaceholderColor="#818181" TextColor="#F0F0F0"/>
+                        </StackLayout>
+                        <StackLayout Padding="13, 3">
+                            <Label x:Name="DeviceInfoLabel" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14"/>
+                            <Button x:Name="SendButt" FontFamily="UniNeueBold" FontSize="14" HeightRequest="43" VerticalOptions="Center" CornerRadius="45" BackgroundColor="#1B7280" 
+                            TextColor="#F0F0F0" Text="Send" Margin="2" Clicked="SendButt_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <controls:CustomFrame BackgroundColor="#D1FFF7" BorderColor="Transparent" Padding="0, 6, 0, 6" CornerRadius="45, 45, 0, 0 " VerticalOptions="EndAndExpand">
+                <StackLayout>
+                    <Label FontSize="11.06" TextColor="#0A1646" HorizontalOptions="Center" FontFamily="UniNeueBold" Text="Made in love with taiwbi">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="InstagarmOpen_Tapped" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </controls:CustomFrame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

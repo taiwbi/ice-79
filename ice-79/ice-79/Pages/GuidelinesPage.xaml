@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ice_79"
+             x:Class="ice_79.GuidelinesPage"
+             BackgroundColor="#0A1646"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="8, 10">
+
+                    <!--Guidelines Frame-->
+
+                    <Frame Padding="0, 10" BackgroundColor="Transparent" BorderColor="White" CornerRadius="11">
+                        <StackLayout>
+                            <Label Text="Guidelines" FontFamily="UniNeueBold" TextColor="#F0F0F0" Padding="13, 0" FontSize="20"/>
+                            <Label Text="Important notes you should know before start using app" FontFamily="UniNeueBook" TextColor="#0A1646" BackgroundColor="#F0F0F0" Padding="13, 0" FontSize="11"/>
+                            <StackLayout Padding="13, 0">
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="Ice-79 is an app to protect your phone from theft or loss. This app helps you find your phone by sending your phone's location to numbers that are already registered as trusted numbers. If you didn't register any number as a trusted number before you lost your phone, or if you don't have access to the registered numbers, this app won't send you the location when it's needed. We do this to protect your security and you from hackers."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="This app does not require an internet connection when it wants to send you the location, but to use it, your phone must be in a location where the mobile operator and GPS waves are easily accessible, and you must have enough credit in your account to send SMS. Otherwise, the application will not be able to find the phone's location or send. But don't worry, with the advancement of technology, these waves are available almost everywhere on the planet."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="You can simply use the command line with sending SMS to your phone. All tutorials are available in the app after you log in to your account or use the license to access the app futures."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="We have done our best to make this application as good as possible, but there may be problems at various times, such as when the phone has no antenna, is turned off, or when Android puts the application to sleep. To avoid this problem, you can turn on your phone's GPS and antenna, and turn off battery optimization for ICE 79. In some cases it is better to turn on the mobile data of your phone."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="This app requires some permissions to work properly. If you do not grant the app these permissions, the ice-79 will not be able to provide services to you. Ice-79 will not use any of this information to spy on you and no information will be sent to our servers, only when you enter the license key it will be sent to our servers for approval. And that is the only thing that is sent to us by Ice-79."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="To work better, you can turn off battery optimization for this app. You can do this in the settings of your phone."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="Access to SMS to send you the location, access to location to get the location of your phone if it is lost, and access to memory to write the log file if needed to report an error in the app is required to be used. If you do not grant the program any of these permissions, that part will not work and we have no choice but to do what we designed the program to do."/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--Privacy policy Frame-->
+
+                    <Frame Padding="0, 10" BackgroundColor="Transparent" BorderColor="White" CornerRadius="11">
+                        <StackLayout>
+                            <Label Text="Privacy policy" FontFamily="UniNeueBold" TextColor="#F0F0F0" Padding="13, 0" FontSize="20"/>
+                            <Label Text="See what we get and what don't" FontFamily="UniNeueBook" TextColor="#0A1646" BackgroundColor="#F0F0F0" Padding="13, 0" FontSize="11"/>
+                            <StackLayout Padding="13, 0">
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="In this Agreement, we are (taiwbi) and this app developers. meaning of the application, app or program or software is (ice79) and you are the user who legally and without cracking the app or hacking it or modifying our software or any editing that leads to changes in the function of the application, installed our  app on your mobile phone."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="Our app needs some permissions to perform the functions correctly that you are asked to grant when you open the app. You can grant these permissions to the program or not. We have reduced the necessary permissions as much as we could to increase your confidence in the program, but we still need permissions to do our duty. The reason for asking for these permissions and how to use them is given below."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="Access to SMS is needed to send you the location, access to the location is needed to get the location of your phone when it lost and access to storage is needed to write the log file to find a bug when something happens. If you don't grant any of these permissions to the program, that part will malfunction and we have no choice but request for these permissions."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="All information that is automatically collected from you when using the application is stored only on your phone and no information, including location, will ever be sent to us. If you use the contact us form or report a bug, your email with the content of the message will send to us."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="This agreement is valid until the release of the new version of the ice79 by us, but after that you must install the new version of the program to find out is this agreement changed or not."/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--Terms of services-->
+                    
+                    <Frame Padding="0, 10" BackgroundColor="Transparent" BorderColor="White" CornerRadius="11">
+                        <StackLayout>
+                            <Label Text="Terms of services" FontFamily="UniNeueBold" TextColor="#F0F0F0" Padding="13, 0" FontSize="20"/>
+                            <Label Text="The commitments you make to us" FontFamily="UniNeueBook" TextColor="#0A1646" BackgroundColor="#F0F0F0" Padding="13, 0" FontSize="11"/>
+                            <StackLayout Padding="13, 0">
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="As a user of our application, you accept that you won't copy the product idea or publish the product without disclosing the name of the developer."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="We try to answer all support emails, but we may not respond if we receive too many emails. However, we do try to review them all."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="You agree not to send any email that contains a virus, malware, worm, or other malicious file to support email address."/>
+                                <Label FontFamily="UniNeueBook" FontSize="14" TextColor="#F0F0F0"
+                               Text="This agreement is valid until the release of the new version of the ice79 by us, but after that you must install the new version of the program to find out is this agreement changed or not."/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <!--taiwbi note-->
+
+                <controls:CustomFrame BackgroundColor="#D1FFF7" BorderColor="Transparent" Padding="0, 6, 0, 6" CornerRadius="45, 45, 0, 0 " VerticalOptions="EndAndExpand">
+                    <StackLayout>
+                        <Label FontSize="11.06" TextColor="#0A1646" HorizontalOptions="Center" FontFamily="UniNeueBold" Text="Made in love with taiwbi">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="InstagarmOpen_Tapped" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </controls:CustomFrame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

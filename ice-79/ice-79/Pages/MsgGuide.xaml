@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Sends command text messages directly from inside the application-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ice_79" x:DataType="controls:CustomFrame"
+             x:Class="ice_79.MsgGuide"
+             BackgroundColor="#0A1646"
+             Opacity="50"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Padding="8, 0">
+                        <Frame Padding="0, 8" BorderColor="#F0F0F0" BackgroundColor="Transparent" CornerRadius="11">
+                            <StackLayout>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="20" FontFamily="UniNeueBold" Text="Messaging Guide"/>
+                                <Label Padding="13, 0" Text="See how you can find your phone when it losts" TextColor="#0A1646" FontSize="11" Background="#F0F0F0"
+                                   FontFamily="UniNeueBook"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="14" FontFamily="UniNeueBook" Text="If your mobile phone is lost and you have ice-79 installed on it, you can send your commands via SMS to your lost mobile phone. If it has the necessary access to execute the command, it will start executing the command and notify you when it is complete."/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="14" FontFamily="UniNeueBook" Text="You need to know what commands can be sent via SMS. There is a list of commands below, write them down, or install the app on trusted phones to access the commands if needed."/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="14" FontFamily="UniNeueBook" Text="Get Phone location: ice-79 will send you the last location of the phone. The command is 'ice-79/$ get location'"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="14" FontFamily="UniNeueBook" Text="Lock phone: ice-79 will lock the phone and you should enter your ice-79 code to unlock it. It is not available yet and we are working on it."/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="14" FontFamily="UniNeueBook" Text="Loud alarm: your phone will ring loudly even if it is set back to silent or do not disturb mode. This feature is not yet available and we are working on it."/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="14" FontFamily="UniNeueBook" Text="Clear all data: All your data will be completely erased. It is not yet available and we are working on it."/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="14" FontFamily="UniNeueBook" Text="All of these commands are available offline. If you have a problem with these you can send us feedback."/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Padding="0, 8, 0, 13" BorderColor="#F0F0F0" BackgroundColor="Transparent" CornerRadius="11">
+                            <StackLayout>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontSize="20" FontFamily="UniNeueBold" Text="Direct Messaging"/>
+                                <Label Padding="13, 0" Text="Message directly to lost phone" TextColor="#0A1446" Background="#F0F0F0" FontSize="11" FontFamily="UniNeueBook"/>
+                                <StackLayout Padding="13, 0">
+                                    <Entry x:Name="PhoneNumber" Placeholder="Type your lost phone's number" FontFamily="UniNeueBook" PlaceholderColor="#818181" TextColor="#F0F0F0" FontSize="14"/>
+                                    <Picker BackgroundColor="#0A1646" x:Name="SelectedAction" Title="Choose Your Message" FontFamily="UniNeueBook" TitleColor="#F0F0F0" TextColor="#F0F0F0" FontSize="14">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Get phone location</x:String>
+                                                <x:String>Lock the phone</x:String>
+                                                <x:String>Loud Alarm</x:String>
+                                                <x:String>Delete all the data</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                    <Button x:Name="SendMsgButt" Text="Send Command to other phone" FontFamily="UniNeueBold" FontSize="14" BackgroundColor="Coral" CornerRadius="45" HeightRequest="43" TextColor="#0A1446" Clicked="SendMsgButt_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+            <!--taiwbi note-->
+
+            <controls:CustomFrame BackgroundColor="#D1FFF7" BorderColor="Transparent" Padding="0, 6" CornerRadius="45, 45, 0, 0" VerticalOptions="EndAndExpand">
+                <Label Text="Made in love with taiwbi" FontSize="11.46" TextColor="#0A1646" HorizontalOptions="Center" FontFamily="UniNeueBold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="InstagarmOpen_Tapped" NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </controls:CustomFrame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

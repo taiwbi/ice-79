@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Show the last sent locations list-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ice_79"
+             x:Class="ice_79.LastLocSent"
+             BackgroundColor="#0A1646"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="8">
+                    <Frame BackgroundColor="Transparent" BorderColor="White" CornerRadius="11" Padding="0, 13">
+                        <StackLayout>
+                            <Label x:Name="TitleLabel" FontFamily="UniNeueBold" Text="Last Sent Locations" TextColor="#F0F0F0" Padding="20, 0" FontSize="20"/>
+                            <Label x:Name="ShortexLabel" FontFamily="UniNeueBook" FontSize="11" Text="Every requests will appear here!" TextColor="#0A1446" BackgroundColor="White" Padding="20, 0"/>
+                            <StackLayout Padding="20, 0">
+                                <Label x:Name="MainText" FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="" TextColor="#F0F0F0"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <!--taiwbi note-->
+
+                <controls:CustomFrame BackgroundColor="#D1FFF7" BorderColor="Transparent" Padding="0, 6, 0, 6" CornerRadius="45, 45, 0, 0 " VerticalOptions="EndAndExpand">
+                    <StackLayout>
+                        <Label FontSize="11.06" TextColor="#0A1646" HorizontalOptions="Center" FontFamily="UniNeueBold" Text="Made in love with taiwbi">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="InstagarmOpen_Tapped" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </controls:CustomFrame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

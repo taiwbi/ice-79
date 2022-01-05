@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.2" android:supportsRtl="true" package="com.taiwbi.ice79" android:installLocation="internalOnly" android:versionCode="3">
+	<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="31" />
+	<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.BROADCAST_SMS" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<application android:label="ICE 79" android:theme="@style/MainTheme" android:icon="@mipmap/icon" android:allowBackup="false"></application>
+</manifest>

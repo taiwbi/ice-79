@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ice_79"
+             x:Class="ice_79.LicenseInfo"
+             BackgroundColor="#0A1646"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="8">
+                <Frame BackgroundColor="Transparent" BorderColor="White" CornerRadius="11" Padding="0, 13">
+                    <StackLayout>
+                        <Label x:Name="TitleLabel" FontFamily="UniNeueBold" Text="License Informations" TextColor="#F0F0F0" Padding="20, 0" FontSize="20"/>
+                        <Label x:Name="ShortexLabel" FontFamily="UniNeueBook" FontSize="11" Text="See your license informations here!" TextColor="#0A1446" BackgroundColor="White" Padding="20, 0"/>
+                        <StackLayout Padding="20, 0">
+                            <ScrollView>
+                                <StackLayout>
+                                    <Label x:Name="LicenseCode" FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="License code: free" TextColor="#F0F0F0"/>
+                                    <Label x:Name="Name" FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="Your Name: Not available" TextColor="#F0F0F0"/>
+                                    <Label x:Name="DeviceID" FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="Your device ID: Not available" TextColor="#F0F0F0"/>
+                                    <Label x:Name="Expdate" FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="Expiration date: Not available" TextColor="#F0F0F0"/>
+                                    <Label x:Name="StartDate" FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="Status: Not available" TextColor="#F0F0F0"/>
+                                    <Label FontSize="14" FontFamily="UniNeueBook" Padding="0, 2" Text="ICE 79 is completely OPEN SOURCE and free to use and does not require a license. If you would like to support this project, you can help us through the following wallets. (Be careful as this program is open source, anyone can chage this addresses. Always install the application from the developer's official github page: github.com/taiwbi/ice-79" TextColor="#F0F0F0"/>
+                                    <!-- Wallet Addresses -->
+                                    <Label FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="Bitcoin: 1M8qEG2QDyHeoezuw3uymhjrjAe4zYoYwb" TextColor="#F0F0F0">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="BTC_Tapped" NumberOfTapsRequired="1"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="BitcoinCash: bitcoincash:qrl7xtzdfzhkuy7maw5q70j9h4qdfwcf3u3nse8klf" TextColor="#F0F0F0">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="BCH_Tapped" NumberOfTapsRequired="1"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="Ethereum: 0x453F08Ca70f840462DCCdbC7028632878119181f" TextColor="#F0F0F0">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="ETH_Tapped" NumberOfTapsRequired="1"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="LiteCoin: LSExkyQisViq1vCKU6rbAV9TXr17HacQ4a" TextColor="#F0F0F0">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="LTC_Tapped" NumberOfTapsRequired="1"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label FontSize="14" Padding="0, -1" FontFamily="UniNeueBook" Text="DogeCoin: DGiVUnjw7RvhFYDjvkv1mU19kEGN4N8HUn" TextColor="#F0F0F0">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Doge_Tapped" NumberOfTapsRequired="1"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label FontSize="14" FontFamily="UniNeueBook" Text="Click on each to copy" TextColor="#F0F0F0"/>
+                                    <Button x:Name="CloseButt" Text="OK"  FontFamily="UniNeueBold" FontSize="14" HeightRequest="43" VerticalOptions="Center" CornerRadius="45" BackgroundColor="#1B7280" 
+                            TextColor="#F0F0F0" Clicked="CloseButt_Clicked"/>
+                                </StackLayout>
+                            </ScrollView>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <!--taiwbi note-->
+
+            <controls:CustomFrame BackgroundColor="#D1FFF7" BorderColor="Transparent" Padding="0, 6, 0, 6" CornerRadius="45, 45, 0, 0 " VerticalOptions="EndAndExpand">
+                <StackLayout>
+                    <Label FontSize="11.06" TextColor="#0A1646" HorizontalOptions="Center" FontFamily="UniNeueBold" Text="Made in love with taiwbi">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="InstagarmOpen_Tapped" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </controls:CustomFrame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

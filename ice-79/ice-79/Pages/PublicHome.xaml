@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!--Home page (Not the first page)-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ice_79"
+             x:Class="ice_79.PublicHome"
+             BackgroundColor="#0A1646"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="8">
+
+                    <!--Trusted numbers-->
+
+                    <Frame Padding="0, 13" BackgroundColor="Transparent" BorderColor="#F0F0F0" CornerRadius="11">
+                        <StackLayout>
+                            <Label Padding="13, 0" FontSize="20" Text="Trusted Numbers" FontFamily="UniNeueBold" TextColor="#F0F0F0"/>
+                            <Label Padding="13, 0"  Text="Find your phone with trusted number every time you want" TextColor="#0A1646" BackgroundColor="#F0F0F0" FontSize="11"
+                                FontFamily="UniNeueBook"/>
+                            <Label Padding="13, 0" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14"
+                               Text="Here you can add up to 5 numbers as your trusted number, these five numbers can be informed of your phone's location at any time if they request. If they ask, you will find out because a text message will be sent to you. If you don't want your locatoin to be sent to trusted people, remove them from the list."/>
+                            <StackLayout Padding="13, 0">
+                                <Entry x:Name="TrustedNum1" TextColor="#F0F0F0" Placeholder="1." PlaceholderColor="#818181" FontSize="14" HeightRequest="39" 
+                                   ClearButtonVisibility="WhileEditing" FontFamily="UniNeueBook"/>
+                                <Entry x:Name="TrustedNum2" TextColor="#F0F0F0" Placeholder="2." PlaceholderColor="#818181" FontSize="14" HeightRequest="39" 
+                                   ClearButtonVisibility="WhileEditing" FontFamily="UniNeueBook"/>
+                                <Entry x:Name="TrustedNum3" TextColor="#F0F0F0" Placeholder="3." PlaceholderColor="#818181" FontSize="14" HeightRequest="39" 
+                                   ClearButtonVisibility="WhileEditing" FontFamily="UniNeueBook"/>
+                                <Entry x:Name="TrustedNum4" TextColor="#F0F0F0" Placeholder="4." PlaceholderColor="#818181" FontSize="14" HeightRequest="39" 
+                                   ClearButtonVisibility="WhileEditing" FontFamily="UniNeueBook"/>
+                                <Entry x:Name="TrustedNum5" TextColor="#F0F0F0" Placeholder="5." PlaceholderColor="#818181" FontSize="14" HeightRequest="39" 
+                                   ClearButtonVisibility="WhileEditing" FontFamily="UniNeueBook"/>
+                                <Button x:Name="SaveTrustedNum" Text="Save Numbers" FontFamily="UniNeueBold" FontSize="14" HeightRequest="43" VerticalOptions="Center" CornerRadius="45" BackgroundColor="#1B7280" 
+                                    TextColor="#F0F0F0" Margin="2" Clicked="SaveTrustedNum_Clicked"/>
+                                <Label  x:Name="RemoveAllNums" Text="delete all trusted numbers" FontFamily="UniNeueBold" TextDecorations="Underline" TextColor="#F0F0F0" 
+                                    HorizontalOptions="Center" FontSize="14">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                Tapped="RemoveAllNums_Clicked"
+                                NumberOfTapsRequired="1"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--Other tools-->
+
+                    <Frame Padding="0, 13" BackgroundColor="Transparent" BorderColor="#F0F0F0" CornerRadius="11">
+                        <StackLayout>
+                            <Label Padding="13, 0" FontSize="20" Text="Other tools" FontFamily="UniNeueBold" TextColor="#F0F0F0"/>
+                            <Label Padding="13, 0"  Text="Other tools you may need." TextColor="#0A1646" BackgroundColor="#F0F0F0" FontSize="11"
+                                FontFamily="UniNeueBook"/>
+                            <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Spacing="-8" Padding="13, 3">
+                                <Image Source="MsgGuide" WidthRequest="20" HeightRequest="20"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="Messages guide"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MsgGuide_Tapped" NumberOfTapsRequired="1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Spacing="-8" Padding="13, 3">
+                                <Image Source="License" WidthRequest="20" HeightRequest="20"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="License information"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Licenseinfo_Tapped" NumberOfTapsRequired="1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Spacing="-8" Padding="13, 3">
+                                <Image Source="Location" WidthRequest="20" HeightRequest="20"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="Last sent locations"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="LastSentLocations_Tapped" NumberOfTapsRequired="1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Spacing="-8" Padding="13, 3">
+                                <Image Source="Guideline" WidthRequest="20" HeightRequest="20"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="Guideline, privacy policy and terms of services"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Guideprivacyterms_Tapped" NumberOfTapsRequired="1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Spacing="-8" Padding="13, 3">
+                                <Image Source="FAQ" WidthRequest="20" HeightRequest="20"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="Frequently asked questions"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="FrequentlyAsked_Tapped" NumberOfTapsRequired="1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Spacing="-8" Padding="13, 3">
+                                <Image Source="ReportBug" WidthRequest="20" HeightRequest="20"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="Report a bug"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ReportBug_Tapped" NumberOfTapsRequired="1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Spacing="-8" Padding="13, 3">
+                                <Image Source="Contactus" WidthRequest="20" HeightRequest="20"/>
+                                <Label Padding="13, 0" TextColor="#F0F0F0" FontFamily="UniNeueBook" FontSize="14" Text="Contact us"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Contactus_Tapped" NumberOfTapsRequired="1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <!--taiwbi note-->
+
+                <controls:CustomFrame BackgroundColor="#D1FFF7" BorderColor="Transparent" Padding="0, 6, 0, 6" CornerRadius="45, 45, 0, 0 " VerticalOptions="EndAndExpand">
+                    <StackLayout>
+                        <Label FontSize="11.06" TextColor="#0A1646" HorizontalOptions="Center" FontFamily="UniNeueBold" Text="Made in love with taiwbi"/>
+                    </StackLayout>
+                </controls:CustomFrame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

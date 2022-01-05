@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--The first page of the application-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ice_79" x:DataType="controls:CustomFrame"
+             x:Class="ice_79.HomePage"
+             BackgroundColor="#0A1646"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <!--Welcoem note-->
+
+                <controls:CustomFrame BackgroundColor="#007193" BorderColor="Transparent" CornerRadius="0, 0, 45, 45" Padding="0, 14, 0, 14" VerticalOptions="StartAndExpand">
+                    <StackLayout>
+                        <Label FontSize="17.45" FontFamily="BAUHS93" TextColor="#F0F0F0" HorizontalOptions="Center" VerticalOptions="Start" Text="Welcome to ice-79"/>
+                    </StackLayout>
+                </controls:CustomFrame>
+
+                <!--Middle elements-->
+
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Image Source="HomePageLogo" WidthRequest="180" HorizontalOptions="Center" Margin="0"/>
+                    <Label FontSize="20" FontFamily="UniNeueBold" TextColor="#F0F0F0" Text="ICE79: An offline GPS  tracker" HorizontalOptions="Center"/>
+                    <StackLayout HeightRequest="45"/>
+                    <Button x:Name="LoginViaLicense" FontFamily="UniNeueBold" FontSize="14" HeightRequest="43" VerticalOptions="Center" CornerRadius="45" BackgroundColor="#1B7280" 
+                            TextColor="#F0F0F0" Text="Go to home page" Margin="2" Clicked="LoginViaLicense_Clicked"/>
+                    <Label x:Name="GuidelinesPageOpenLabel" Text="show guidelines, privacy policy and terms of services" FontFamily="UniNeueBold" TextDecorations="Underline" TextColor="#F0F0F0" 
+                           HorizontalOptions="Center" FontSize="12">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="GuidelinesPageOpenLabel_Clicked"
+                                NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <!--taiwbi note - As this application's master developer, I'm asking you to not change this page's note. Write your name in other pages if you like-->
+
+                <controls:CustomFrame BackgroundColor="#D1FFF7" BorderColor="Transparent" Padding="0, 6, 0, 6" CornerRadius="45, 45, 0, 0 " VerticalOptions="EndAndExpand">
+                    <StackLayout>
+                        <Label FontSize="11.06" TextColor="#0A1646" HorizontalOptions="Center" FontFamily="UniNeueBold" Text="Made in love with taiwbi">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="InstagarmOpen_Tapped" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </controls:CustomFrame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
