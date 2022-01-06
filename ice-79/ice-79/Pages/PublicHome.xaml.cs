@@ -87,11 +87,11 @@ namespace ice_79
                 await Navigation.PushAsync(new Pop_Up());
                 return;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 PopUPData.Title = "Error";
                 PopUPData.Shortexplan = "Something went wrong";
-                PopUPData.Longexplan = $"Something happens while we were tryign to save your numbers. We're sorry about this! you can send feedback for us: ice-79@taiwbi.ir.\nError Log: {ex}";
+                PopUPData.Longexplan = "Something happens while we were tryign to save your numbers. We're sorry about this! you can send feedback for us: ice-79@taiwbi.ir.";
                 await Navigation.PushAsync(new Pop_Up());
             }
         }
